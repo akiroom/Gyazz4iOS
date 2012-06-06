@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		512460D9154F9E37006609EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512460D8154F9E37006609EE /* UIKit.framework */; };
+		512460DB154F9E37006609EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512460DA154F9E37006609EE /* Foundation.framework */; };
+		512460DD154F9E37006609EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512460DC154F9E37006609EE /* CoreGraphics.framework */; };
+		512460E3154F9E39006609EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 512460E1154F9E39006609EE /* InfoPlist.strings */; };
+		512460E5154F9E39006609EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 512460E4154F9E39006609EE /* main.m */; };
+		512460E9154F9E3B006609EE /* GYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 512460E8154F9E3B006609EE /* GYAppDelegate.m */; };
+		512460FD154F9E41006609EE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512460FC154F9E41006609EE /* SenTestingKit.framework */; };
+		512460FE154F9E41006609EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512460D8154F9E37006609EE /* UIKit.framework */; };
+		512460FF154F9E41006609EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512460DA154F9E37006609EE /* Foundation.framework */; };
+		51246107154F9E42006609EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51246105154F9E42006609EE /* InfoPlist.strings */; };
+		5124610A154F9E43006609EE /* gyazz4iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246109154F9E43006609EE /* gyazz4iOSTests.m */; };
+		51246120154F9FAE006609EE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5124611F154F9FAE006609EE /* CFNetwork.framework */; };
+		51246137154F9FF8006609EE /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246124154F9FF8006609EE /* ASIAuthenticationDialog.m */; };
+		51246138154F9FF8006609EE /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246127154F9FF8006609EE /* ASIDataCompressor.m */; };
+		51246139154F9FF8006609EE /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246129154F9FF8006609EE /* ASIDataDecompressor.m */; };
+		5124613A154F9FF8006609EE /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124612B154F9FF8006609EE /* ASIDownloadCache.m */; };
+		5124613B154F9FF8006609EE /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124612D154F9FF8006609EE /* ASIFormDataRequest.m */; };
+		5124613C154F9FF8006609EE /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124612F154F9FF8006609EE /* ASIHTTPRequest.m */; };
+		5124613D154F9FF8006609EE /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246133154F9FF8006609EE /* ASIInputStream.m */; };
+		5124613E154F9FF8006609EE /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246135154F9FF8006609EE /* ASINetworkQueue.m */; };
+		51246141154FA024006609EE /* GYSiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246140154FA024006609EE /* GYSiteListViewController.m */; };
+		51246145154FA08B006609EE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246144154FA08B006609EE /* Reachability.m */; };
+		5124614D154FA0DD006609EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5124614C154FA0DD006609EE /* SystemConfiguration.framework */; };
+		5124614F154FA0F0006609EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5124614E154FA0F0006609EE /* MobileCoreServices.framework */; };
+		51246151154FA106006609EE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 51246150154FA106006609EE /* libz.dylib */; };
+		51246154154FA1BB006609EE /* GYArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51246153154FA1BB006609EE /* GYArticleListViewController.m */; };
+		5124618A154FAF61006609EE /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5124616D154FA958006609EE /* libsbjson-ios.a */; };
+		512461B9154FB9AC006609EE /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 512461B8154FB9AC006609EE /* EGORefreshTableHeaderView.m */; };
+		512461BC154FB9BE006609EE /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 512461BA154FB9BE006609EE /* grayArrow.png */; };
+		512461BD154FB9BE006609EE /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 512461BB154FB9BE006609EE /* grayArrow@2x.png */; };
+		512461C3154FBA5B006609EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512461C2154FBA5B006609EE /* QuartzCore.framework */; };
+		512461CC154FBD70006609EE /* GYArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 512461CA154FBD6F006609EE /* GYArticleViewController.m */; };
+		512461CD154FBD70006609EE /* GYArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512461CB154FBD6F006609EE /* GYArticleViewController.xib */; };
+		512461E1154FCD4E006609EE /* GYArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 512461E0154FCD4E006609EE /* GYArticleCell.m */; };
+		512461E3154FE3F9006609EE /* gyazz.html in Resources */ = {isa = PBXBuildFile; fileRef = 512461E2154FE3F9006609EE /* gyazz.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51246100154F9E41006609EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 512460CB154F9E1F006609EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 512460D3154F9E36006609EE;
+			remoteInfo = gyazz4iOS;
+		};
+		51246168154FA958006609EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51246161154FA958006609EE /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC12323D1391D5CC00131607;
+			remoteInfo = SBJson;
+		};
+		5124616A154FA958006609EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51246161154FA958006609EE /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC1232521391D5CC00131607;
+			remoteInfo = SBJsonTests;
+		};
+		5124616C154FA958006609EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51246161154FA958006609EE /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2626913920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+		5124616E154FA958006609EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51246161154FA958006609EE /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2627313920FC7003D9994;
+			remoteInfo = "sbjson-iosTests";
+		};
+		5124618B154FAF66006609EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51246161154FA958006609EE /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		512460D4154F9E37006609EE /* gyazz4iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gyazz4iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		512460D8154F9E37006609EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		512460DA154F9E37006609EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		512460DC154F9E37006609EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		512460E0154F9E38006609EE /* gyazz4iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gyazz4iOS-Info.plist"; sourceTree = "<group>"; };
+		512460E2154F9E39006609EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		512460E4154F9E39006609EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		512460E6154F9E3A006609EE /* gyazz4iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gyazz4iOS-Prefix.pch"; sourceTree = "<group>"; };
+		512460E7154F9E3A006609EE /* GYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAppDelegate.h; sourceTree = "<group>"; };
+		512460E8154F9E3B006609EE /* GYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAppDelegate.m; sourceTree = "<group>"; };
+		512460FB154F9E41006609EE /* gyazz4iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gyazz4iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		512460FC154F9E41006609EE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		51246104154F9E42006609EE /* gyazz4iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gyazz4iOSTests-Info.plist"; sourceTree = "<group>"; };
+		51246106154F9E42006609EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		51246108154F9E43006609EE /* gyazz4iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gyazz4iOSTests.h; sourceTree = "<group>"; };
+		51246109154F9E43006609EE /* gyazz4iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gyazz4iOSTests.m; sourceTree = "<group>"; };
+		5124611F154F9FAE006609EE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		51246123154F9FF8006609EE /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = "asi-http-request/Classes/ASIAuthenticationDialog.h"; sourceTree = "<group>"; };
+		51246124154F9FF8006609EE /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = "asi-http-request/Classes/ASIAuthenticationDialog.m"; sourceTree = "<group>"; };
+		51246125154F9FF8006609EE /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = "asi-http-request/Classes/ASICacheDelegate.h"; sourceTree = "<group>"; };
+		51246126154F9FF8006609EE /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = "asi-http-request/Classes/ASIDataCompressor.h"; sourceTree = "<group>"; };
+		51246127154F9FF8006609EE /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = "asi-http-request/Classes/ASIDataCompressor.m"; sourceTree = "<group>"; };
+		51246128154F9FF8006609EE /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = "asi-http-request/Classes/ASIDataDecompressor.h"; sourceTree = "<group>"; };
+		51246129154F9FF8006609EE /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = "asi-http-request/Classes/ASIDataDecompressor.m"; sourceTree = "<group>"; };
+		5124612A154F9FF8006609EE /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = "asi-http-request/Classes/ASIDownloadCache.h"; sourceTree = "<group>"; };
+		5124612B154F9FF8006609EE /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = "asi-http-request/Classes/ASIDownloadCache.m"; sourceTree = "<group>"; };
+		5124612C154F9FF8006609EE /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = "asi-http-request/Classes/ASIFormDataRequest.h"; sourceTree = "<group>"; };
+		5124612D154F9FF8006609EE /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = "asi-http-request/Classes/ASIFormDataRequest.m"; sourceTree = "<group>"; };
+		5124612E154F9FF8006609EE /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = "asi-http-request/Classes/ASIHTTPRequest.h"; sourceTree = "<group>"; };
+		5124612F154F9FF8006609EE /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = "asi-http-request/Classes/ASIHTTPRequest.m"; sourceTree = "<group>"; };
+		51246130154F9FF8006609EE /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = "asi-http-request/Classes/ASIHTTPRequestConfig.h"; sourceTree = "<group>"; };
+		51246131154F9FF8006609EE /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = "asi-http-request/Classes/ASIHTTPRequestDelegate.h"; sourceTree = "<group>"; };
+		51246132154F9FF8006609EE /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = "asi-http-request/Classes/ASIInputStream.h"; sourceTree = "<group>"; };
+		51246133154F9FF8006609EE /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = "asi-http-request/Classes/ASIInputStream.m"; sourceTree = "<group>"; };
+		51246134154F9FF8006609EE /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = "asi-http-request/Classes/ASINetworkQueue.h"; sourceTree = "<group>"; };
+		51246135154F9FF8006609EE /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = "asi-http-request/Classes/ASINetworkQueue.m"; sourceTree = "<group>"; };
+		51246136154F9FF8006609EE /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = "asi-http-request/Classes/ASIProgressDelegate.h"; sourceTree = "<group>"; };
+		5124613F154FA024006609EE /* GYSiteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYSiteListViewController.h; sourceTree = "<group>"; };
+		51246140154FA024006609EE /* GYSiteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYSiteListViewController.m; sourceTree = "<group>"; };
+		51246143154FA08B006609EE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "asi-http-request/External/Reachability/Reachability.h"; sourceTree = "<group>"; };
+		51246144154FA08B006609EE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "asi-http-request/External/Reachability/Reachability.m"; sourceTree = "<group>"; };
+		5124614C154FA0DD006609EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5124614E154FA0F0006609EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		51246150154FA106006609EE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		51246152154FA1BB006609EE /* GYArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYArticleListViewController.h; sourceTree = "<group>"; };
+		51246153154FA1BB006609EE /* GYArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYArticleListViewController.m; sourceTree = "<group>"; };
+		51246161154FA958006609EE /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "json-framework/SBJson.xcodeproj"; sourceTree = "<group>"; };
+		512461B7154FB9AC006609EE /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGORefreshTableHeaderView.h; path = EGOTableViewPullRefresh/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		512461B8154FB9AC006609EE /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = EGOTableViewPullRefresh/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		512461BA154FB9BE006609EE /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayArrow.png; path = EGOTableViewPullRefresh/EGOTableViewPullRefresh/Resources/grayArrow.png; sourceTree = SOURCE_ROOT; };
+		512461BB154FB9BE006609EE /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grayArrow@2x.png"; path = "EGOTableViewPullRefresh/EGOTableViewPullRefresh/Resources/grayArrow@2x.png"; sourceTree = SOURCE_ROOT; };
+		512461C2154FBA5B006609EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		512461C9154FBD6F006609EE /* GYArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYArticleViewController.h; sourceTree = "<group>"; };
+		512461CA154FBD6F006609EE /* GYArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYArticleViewController.m; sourceTree = "<group>"; };
+		512461CB154FBD6F006609EE /* GYArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYArticleViewController.xib; sourceTree = "<group>"; };
+		512461DF154FCD4E006609EE /* GYArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYArticleCell.h; sourceTree = "<group>"; };
+		512461E0154FCD4E006609EE /* GYArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYArticleCell.m; sourceTree = "<group>"; };
+		512461E2154FE3F9006609EE /* gyazz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = gyazz.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		512460D1154F9E36006609EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512461C3154FBA5B006609EE /* QuartzCore.framework in Frameworks */,
+				5124618A154FAF61006609EE /* libsbjson-ios.a in Frameworks */,
+				51246151154FA106006609EE /* libz.dylib in Frameworks */,
+				5124614F154FA0F0006609EE /* MobileCoreServices.framework in Frameworks */,
+				5124614D154FA0DD006609EE /* SystemConfiguration.framework in Frameworks */,
+				51246120154F9FAE006609EE /* CFNetwork.framework in Frameworks */,
+				512460D9154F9E37006609EE /* UIKit.framework in Frameworks */,
+				512460DB154F9E37006609EE /* Foundation.framework in Frameworks */,
+				512460DD154F9E37006609EE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		512460F7154F9E41006609EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512460FD154F9E41006609EE /* SenTestingKit.framework in Frameworks */,
+				512460FE154F9E41006609EE /* UIKit.framework in Frameworks */,
+				512460FF154F9E41006609EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		512460C9154F9E1F006609EE = {
+			isa = PBXGroup;
+			children = (
+				51246121154F9FE4006609EE /* library */,
+				512460DE154F9E37006609EE /* gyazz4iOS */,
+				51246102154F9E41006609EE /* gyazz4iOSTests */,
+				512460D7154F9E37006609EE /* Frameworks */,
+				512460D5154F9E37006609EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		512460D5154F9E37006609EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				512460D4154F9E37006609EE /* gyazz4iOS.app */,
+				512460FB154F9E41006609EE /* gyazz4iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		512460D7154F9E37006609EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51246150154FA106006609EE /* libz.dylib */,
+				512461C2154FBA5B006609EE /* QuartzCore.framework */,
+				5124614E154FA0F0006609EE /* MobileCoreServices.framework */,
+				5124614C154FA0DD006609EE /* SystemConfiguration.framework */,
+				5124611F154F9FAE006609EE /* CFNetwork.framework */,
+				512460D8154F9E37006609EE /* UIKit.framework */,
+				512460DA154F9E37006609EE /* Foundation.framework */,
+				512460DC154F9E37006609EE /* CoreGraphics.framework */,
+				512460FC154F9E41006609EE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		512460DE154F9E37006609EE /* gyazz4iOS */ = {
+			isa = PBXGroup;
+			children = (
+				51246142154FA027006609EE /* ViewController */,
+				512460E7154F9E3A006609EE /* GYAppDelegate.h */,
+				512460E8154F9E3B006609EE /* GYAppDelegate.m */,
+				512460DF154F9E38006609EE /* Supporting Files */,
+			);
+			path = gyazz4iOS;
+			sourceTree = "<group>";
+		};
+		512460DF154F9E38006609EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				512460E0154F9E38006609EE /* gyazz4iOS-Info.plist */,
+				512460E1154F9E39006609EE /* InfoPlist.strings */,
+				512460E4154F9E39006609EE /* main.m */,
+				512460E6154F9E3A006609EE /* gyazz4iOS-Prefix.pch */,
+				512461E2154FE3F9006609EE /* gyazz.html */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51246102154F9E41006609EE /* gyazz4iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				51246108154F9E43006609EE /* gyazz4iOSTests.h */,
+				51246109154F9E43006609EE /* gyazz4iOSTests.m */,
+				51246103154F9E42006609EE /* Supporting Files */,
+			);
+			path = gyazz4iOSTests;
+			sourceTree = "<group>";
+		};
+		51246103154F9E42006609EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				51246104154F9E42006609EE /* gyazz4iOSTests-Info.plist */,
+				51246105154F9E42006609EE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51246121154F9FE4006609EE /* library */ = {
+			isa = PBXGroup;
+			children = (
+				512461B6154FB9A4006609EE /* EGOTableViewPullRefresh */,
+				51246161154FA958006609EE /* SBJson.xcodeproj */,
+				51246122154F9FEF006609EE /* ASIHTTPRequest */,
+			);
+			name = library;
+			sourceTree = "<group>";
+		};
+		51246122154F9FEF006609EE /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				51246143154FA08B006609EE /* Reachability.h */,
+				51246144154FA08B006609EE /* Reachability.m */,
+				51246123154F9FF8006609EE /* ASIAuthenticationDialog.h */,
+				51246124154F9FF8006609EE /* ASIAuthenticationDialog.m */,
+				51246125154F9FF8006609EE /* ASICacheDelegate.h */,
+				51246126154F9FF8006609EE /* ASIDataCompressor.h */,
+				51246127154F9FF8006609EE /* ASIDataCompressor.m */,
+				51246128154F9FF8006609EE /* ASIDataDecompressor.h */,
+				51246129154F9FF8006609EE /* ASIDataDecompressor.m */,
+				5124612A154F9FF8006609EE /* ASIDownloadCache.h */,
+				5124612B154F9FF8006609EE /* ASIDownloadCache.m */,
+				5124612C154F9FF8006609EE /* ASIFormDataRequest.h */,
+				5124612D154F9FF8006609EE /* ASIFormDataRequest.m */,
+				5124612E154F9FF8006609EE /* ASIHTTPRequest.h */,
+				5124612F154F9FF8006609EE /* ASIHTTPRequest.m */,
+				51246130154F9FF8006609EE /* ASIHTTPRequestConfig.h */,
+				51246131154F9FF8006609EE /* ASIHTTPRequestDelegate.h */,
+				51246132154F9FF8006609EE /* ASIInputStream.h */,
+				51246133154F9FF8006609EE /* ASIInputStream.m */,
+				51246134154F9FF8006609EE /* ASINetworkQueue.h */,
+				51246135154F9FF8006609EE /* ASINetworkQueue.m */,
+				51246136154F9FF8006609EE /* ASIProgressDelegate.h */,
+			);
+			name = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		51246142154FA027006609EE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				512461DE154FCBDD006609EE /* Article */,
+				5124613F154FA024006609EE /* GYSiteListViewController.h */,
+				51246140154FA024006609EE /* GYSiteListViewController.m */,
+				51246152154FA1BB006609EE /* GYArticleListViewController.h */,
+				51246153154FA1BB006609EE /* GYArticleListViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		51246162154FA958006609EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51246169154FA958006609EE /* SBJson.framework */,
+				5124616B154FA958006609EE /* SBJsonTests.octest */,
+				5124616D154FA958006609EE /* libsbjson-ios.a */,
+				5124616F154FA958006609EE /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		512461B6154FB9A4006609EE /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				512461B7154FB9AC006609EE /* EGORefreshTableHeaderView.h */,
+				512461B8154FB9AC006609EE /* EGORefreshTableHeaderView.m */,
+				512461BA154FB9BE006609EE /* grayArrow.png */,
+				512461BB154FB9BE006609EE /* grayArrow@2x.png */,
+			);
+			name = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		512461DE154FCBDD006609EE /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				512461C9154FBD6F006609EE /* GYArticleViewController.h */,
+				512461CA154FBD6F006609EE /* GYArticleViewController.m */,
+				512461CB154FBD6F006609EE /* GYArticleViewController.xib */,
+				512461DF154FCD4E006609EE /* GYArticleCell.h */,
+				512461E0154FCD4E006609EE /* GYArticleCell.m */,
+			);
+			name = Article;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		512460D3154F9E36006609EE /* gyazz4iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5124610D154F9E43006609EE /* Build configuration list for PBXNativeTarget "gyazz4iOS" */;
+			buildPhases = (
+				512460D0154F9E36006609EE /* Sources */,
+				512460D1154F9E36006609EE /* Frameworks */,
+				512460D2154F9E36006609EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5124618C154FAF66006609EE /* PBXTargetDependency */,
+			);
+			name = gyazz4iOS;
+			productName = gyazz4iOS;
+			productReference = 512460D4154F9E37006609EE /* gyazz4iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		512460FA154F9E41006609EE /* gyazz4iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51246110154F9E43006609EE /* Build configuration list for PBXNativeTarget "gyazz4iOSTests" */;
+			buildPhases = (
+				512460F6154F9E41006609EE /* Sources */,
+				512460F7154F9E41006609EE /* Frameworks */,
+				512460F8154F9E41006609EE /* Resources */,
+				512460F9154F9E41006609EE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51246101154F9E41006609EE /* PBXTargetDependency */,
+			);
+			name = gyazz4iOSTests;
+			productName = gyazz4iOSTests;
+			productReference = 512460FB154F9E41006609EE /* gyazz4iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		512460CB154F9E1F006609EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 512460CE154F9E1F006609EE /* Build configuration list for PBXProject "gyazz4iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 512460C9154F9E1F006609EE;
+			productRefGroup = 512460D5154F9E37006609EE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 51246162154FA958006609EE /* Products */;
+					ProjectRef = 51246161154FA958006609EE /* SBJson.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				512460D3154F9E36006609EE /* gyazz4iOS */,
+				512460FA154F9E41006609EE /* gyazz4iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		51246169154FA958006609EE /* SBJson.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SBJson.framework;
+			remoteRef = 51246168154FA958006609EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5124616B154FA958006609EE /* SBJsonTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SBJsonTests.octest;
+			remoteRef = 5124616A154FA958006609EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5124616D154FA958006609EE /* libsbjson-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libsbjson-ios.a";
+			remoteRef = 5124616C154FA958006609EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5124616F154FA958006609EE /* sbjson-iosTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "sbjson-iosTests.octest";
+			remoteRef = 5124616E154FA958006609EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		512460D2154F9E36006609EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512460E3154F9E39006609EE /* InfoPlist.strings in Resources */,
+				512461BC154FB9BE006609EE /* grayArrow.png in Resources */,
+				512461BD154FB9BE006609EE /* grayArrow@2x.png in Resources */,
+				512461CD154FBD70006609EE /* GYArticleViewController.xib in Resources */,
+				512461E3154FE3F9006609EE /* gyazz.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		512460F8154F9E41006609EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51246107154F9E42006609EE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		512460F9154F9E41006609EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		512460D0154F9E36006609EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512460E5154F9E39006609EE /* main.m in Sources */,
+				512460E9154F9E3B006609EE /* GYAppDelegate.m in Sources */,
+				51246137154F9FF8006609EE /* ASIAuthenticationDialog.m in Sources */,
+				51246138154F9FF8006609EE /* ASIDataCompressor.m in Sources */,
+				51246139154F9FF8006609EE /* ASIDataDecompressor.m in Sources */,
+				5124613A154F9FF8006609EE /* ASIDownloadCache.m in Sources */,
+				5124613B154F9FF8006609EE /* ASIFormDataRequest.m in Sources */,
+				5124613C154F9FF8006609EE /* ASIHTTPRequest.m in Sources */,
+				5124613D154F9FF8006609EE /* ASIInputStream.m in Sources */,
+				5124613E154F9FF8006609EE /* ASINetworkQueue.m in Sources */,
+				51246141154FA024006609EE /* GYSiteListViewController.m in Sources */,
+				51246145154FA08B006609EE /* Reachability.m in Sources */,
+				51246154154FA1BB006609EE /* GYArticleListViewController.m in Sources */,
+				512461B9154FB9AC006609EE /* EGORefreshTableHeaderView.m in Sources */,
+				512461CC154FBD70006609EE /* GYArticleViewController.m in Sources */,
+				512461E1154FCD4E006609EE /* GYArticleCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		512460F6154F9E41006609EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5124610A154F9E43006609EE /* gyazz4iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51246101154F9E41006609EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 512460D3154F9E36006609EE /* gyazz4iOS */;
+			targetProxy = 51246100154F9E41006609EE /* PBXContainerItemProxy */;
+		};
+		5124618C154FAF66006609EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sbjson-ios";
+			targetProxy = 5124618B154FAF66006609EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		512460E1154F9E39006609EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				512460E2154F9E39006609EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		51246105154F9E42006609EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51246106154F9E42006609EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5124610B154F9E43006609EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5124610C154F9E43006609EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5124610E154F9E43006609EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/gyazz4iOS-agkoyufkafqdskepuvvclnykwxts/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyazz4iOS/gyazz4iOS-Prefix.pch";
+				INFOPLIST_FILE = "gyazz4iOS/gyazz4iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5124610F154F9E43006609EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/gyazz4iOS-agkoyufkafqdskepuvvclnykwxts/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyazz4iOS/gyazz4iOS-Prefix.pch";
+				INFOPLIST_FILE = "gyazz4iOS/gyazz4iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		51246111154F9E43006609EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/gyazz4iOS.app/gyazz4iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyazz4iOS/gyazz4iOS-Prefix.pch";
+				INFOPLIST_FILE = "gyazz4iOSTests/gyazz4iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		51246112154F9E43006609EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/gyazz4iOS.app/gyazz4iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyazz4iOS/gyazz4iOS-Prefix.pch";
+				INFOPLIST_FILE = "gyazz4iOSTests/gyazz4iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		512460CE154F9E1F006609EE /* Build configuration list for PBXProject "gyazz4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5124610B154F9E43006609EE /* Debug */,
+				5124610C154F9E43006609EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5124610D154F9E43006609EE /* Build configuration list for PBXNativeTarget "gyazz4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5124610E154F9E43006609EE /* Debug */,
+				5124610F154F9E43006609EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51246110154F9E43006609EE /* Build configuration list for PBXNativeTarget "gyazz4iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51246111154F9E43006609EE /* Debug */,
+				51246112154F9E43006609EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 512460CB154F9E1F006609EE /* Project object */;
+}

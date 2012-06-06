@@ -1,0 +1,14 @@
+//
+//  GYArticleListViewController.h
+//  gyazz4iOS
+//
+//  Created by 博紀 秋山 on 12/05/01.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
+
+@interface GYArticleListViewController : UITableViewController <EGORefreshTableHeaderDelegate>
+@property (retain, nonatomic) NSArray *list;
+@end

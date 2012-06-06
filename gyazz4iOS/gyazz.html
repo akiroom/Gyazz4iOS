@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<style type="text/css">
+	body {
+		margin:0px;
+		font-size: 14px;
+	}
+	img {
+		max-width: 320px;
+	}
+</style>
+<script type="text/javascript">
+	
+	window.onerror = function (msg, url, line) {
+//		window.alert("error：msg\n" + msg + "\nurl：\n" + url + "\nline：\n" + line););
+		document.location = "gyazz4ios:console:\nmsg:\n" + msg + "\nurl:\n" + url + "\nline:\n" + line;
+	}
+</script>
+</head>
+<body onload="display();" onresize="display()">
+</body>
+<script type="text/javascript">
+	var root = '';
+	var name = '';
+	function tag(s,line){
+		matched = [];
+		s = s.replace(/</g,'&lt;');
+		while(m = s.match(/^(.*)\[\[\[(([^\]]|\][^\]]|[^\]]\])*)\]\]\](.*)$/)){ // [[[....]]]
+			pre =   m[1];
+			inner = m[2];
+			post =  m[4];
+			if(t = inner.match(/^(http[^ ]+) (.*)\.(jpg|jpeg|jpe|png|gif)/i)){ // [[[http:... ....jpg]]]
+				matched.push('<a href="' + t[1] + '"><img src="' + t[2] + '.' + t[3] + '" border="none" target="_blank" height=80></a>');
+			}
+			else if(t = inner.match(/^(http.+)\.(jpg|jpeg|jpe|png|gif)/i)){ // [[[http...jpg]]]
+				matched.push('<a href="' + t[1] + '.' + t[2] + '" target="_blank"><img src="' + t[1] + '.' + t[2] + '" border="none" height=80></a>');
+			}
+			else { // [[[abc]]]
+				matched.push('<b>' + inner + '</b>');
+			}
+			s = pre + '<<<' + (matched.length-1) + '>>>' + post;
+		}
+		while(m = s.match(/^(.*)\[\[(([^\]]|\][^\]]|[^\]]\])*)\]\](.*)$/)){ // [[....]]
+			pre =   m[1];
+			inner = m[2];
+			post =  m[4];
+			if(t = inner.match(/^(http[^ ]+) (.*)\.(jpg|jpeg|jpe|png|gif)$/i)){ // [[http://example.com/ http://example.com/abc.jpg]]
+				matched.push('<a href="' + t[1] + '" target="_blank"><img src="' + t[2] + '.' + t[3] + '" border="none"></a>');
+			}
+			else if(t = inner.match(/^(http.+)\.(jpg|jpeg|jpe|png|gif)$/i)){ // [[http://example.com/abc.jpg]
+				matched.push('<a href="' + t[1] + '.' + t[2] + '" target="_blank"><img src="' + t[1] + '.' + t[2] + '" border="none"></a>');
+			}
+			else if(t = inner.match(/^((http[s]?|javascript):[^ ]+) (.*)$/)){ // [[http://example.com/ example]]
+				matched.push('<a href="' + t[1] + '" target="_blank">' + t[3] + '</a>');
+			}
+			else if(t = inner.match(/^((http[s]?|javascript):[^ ]+)$/)){ // [[http://example.com/]]
+				matched.push('<a href="' + t[1] + '" class="link" target="_blank">' + t[1] + '</a>');
+			}
+			else if(t = inner.match(/^@([a-zA-Z0-9_]+)$/)){ // @名前 を twitterへのリンクにする
+				matched.push('<a href="http://twitter.com/' + t[1] + '" class="link" target="_blank">@' + t[1] + '</a>');
+			}
+			else if(t = inner.match(/^(.+)::$/)){ //  Wikiname:: で他Wikiに飛ぶ (2011 4/17)
+				matched.push('<a href="' + root + '/' + t[1] + '" class="link" target="_blank" title="' + t[1] + '">' + t[1] + '</a>');
+			}
+			else if(t = inner.match(/^(.+):::(.+)$/)){ //  Wikiname:::Title で他Wikiに飛ぶ (2010 4/27)
+				wikiname = t[1];
+				wikititle = t[2];
+				url = root + '/' + wikiname + '/' + encodeURIComponent(wikititle).replace(/%2F/g,"/");
+				matched.push('<a href="' + url + '" class="link" target="_blank" title="' + wikititle + '">' + wikititle + '</a>');
+			}
+			else if(t = inner.match(/^(.+)::(.+)$/)){ //  Wikiname::Title で他Wikiに飛ぶ (2010 4/27)
+				wikiname = t[1];
+				wikititle = t[2];
+				wikiurl = root + '/' + wikiname + '/';
+				url = root + '/' + wikiname + '/' + encodeURIComponent(wikititle).replace(/%2F/g,"/");
+				matched.push('<a href="' + wikiurl + '" class="link" target="_blank" title="' + wikiname + '">' + wikiname +
+							 '</a>::<a href="' + url + '" class="link" target="_blank" title="' + wikititle + '">' + wikititle + '</a>');
+			}
+			else if(t = inner.match(/^([a-fA-F0-9]{32})\.(\w+) (.*)$/)){ // (MD5).ext をpitecan.com上のデータにリンク (2010 5/1)
+				matched.push('<a href="http://masui.sfc.keio.ac.jp/' + t[1] + '.' + t[2] + '" class="link">' + t[3] + '</a>');
+			}
+			else {
+				matched.push('<a href="' + root + '/' + name + '/' + inner + '" class="tag" target="_blank">' + inner + '</a>');
+			}
+			s = pre + '<<<' + (matched.length-1) + '>>>' + post;
+		}
+		elements = s.split(/ /);
+//		spaces[line] = elements.length - indent(line) - 1;
+		for(i=0;i<elements.length;i++){
+			while(a = elements[i].match(/^(.*)<<<(\d+)>>>(.*)$/)){
+				elements[i] = a[1] + matched[a[2]] + a[3];
+			}
+		}
+		for(i=0;i<elements.length;i++){
+			elements[i] = "<span id='e"+line+'_'+i+"'>" + elements[i] + "</span>";
+		}
+		return elements.join(' ');
+	};
+	
+	var gyazzText = '';
+	
+	var display = function () {
+		var body = document.getElementsByTagName("body").item(0);
+		body.innerHTML = tag(gyazzText,0);
+		document.location = "gyazz4ios:height:" + body.clientHeight;
+	};
+	
+	var setGyazzText = function(_root, _name, text) {
+		if (gyazzText != text) {
+			root = _root;
+			name = _name;
+			gyazzText = text;
+			display();
+		}
+//		var body = document.getElementsByTagName("body").item(0);
+//		body.innerHTML = tag(gyazzText,0);
+//		document.location = "gyazz4ios:height:" + body.clientHeight;
+	};
+	
+//	var onresize = function () {
+//		display();
+//		var body = document.getElementsByTagName("body").item(0);
+//		body.innerHTML = tag(gyazzText,0);
+//		document.location = "gyazz4ios:height:" + body.clientHeight;
+//	};
+	
+//	gyazzText = '[[[test]]]';
+//	setGyazzText();
+	</script>
+</html>
